@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import axios from "axios";
 import { useState, useContext } from "react";
@@ -81,12 +81,13 @@ export default function Login() {
                   </button>
                 </form>
               </div>
-            <p className="text-center mt-3">
-              Don&apos;t have an account? <Link href="/register">Sign Up</Link>
-            </p>
-            <p className="text-center">
-              <Link href="/forgotPassword">Forgot Your Password?</Link>
-            </p>
+              <p className="text-center mt-3">
+                Don&apos;t have an account?{" "}
+                <Link href="/register">Sign Up</Link>
+              </p>
+              <p className="text-center">
+                <Link href="/forgotPassword">Forgot Your Password?</Link>
+              </p>
             </div>
           </div>
         </div>

@@ -48,8 +48,9 @@ nav .logo h3 {
 }
 
 .bottom-nav .bottom-nav-links {
-  width: 1.8rem;
+  font-size: 1.6rem;
   color: #5c636a;
+  margin-bottom: 10px;
 }
 .bottom-nav .bottom-nav-label {
   font-size: 0.7rem;

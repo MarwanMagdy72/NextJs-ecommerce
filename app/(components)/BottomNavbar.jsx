@@ -76,7 +76,7 @@ function BottomNavbar() {
         </div>
       )}
 
-      <nav className="bottom-nav  fixed-bottom bg-light shadow-lg pt-1  right-0 left-0 bottom-0 pe-4  border ">
+      <nav className="bottom-nav  fixed-bottom bg-light shadow-lg pt-1  right-0 left-0 bottom-0 pe-2  border ">
         <div className="">
           <ul className="d-flex align-items-center justify-content-between pt-1">
             <li>

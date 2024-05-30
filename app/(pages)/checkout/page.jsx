@@ -41,7 +41,7 @@ export default function CheckOut() {
   }, [isLogin]);
 
   return (
-    <div className="m-5">
+    <div className="m-lg-5 my-4">
       <h1 className="text-center fw-bold "> Order Details: </h1>
       <div className="table-responsive ">
         <table className="table ">
