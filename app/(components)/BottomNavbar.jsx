@@ -118,7 +118,7 @@ function BottomNavbar() {
             </li>
             <li>
               <Link
-                href={"/brands"}
+                href={"/wishList"}
                 className="d-flex align-items-center flex-column justify-content-center"
               >
                 <FontAwesomeIcon icon={faHeart} className="bottom-nav-links " />
