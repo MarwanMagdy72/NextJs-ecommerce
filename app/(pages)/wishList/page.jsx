@@ -47,7 +47,7 @@ export default function WishList() {
   useEffect(() => {
     if (isLogin == null) return;
     getWishListFun();
-  }, [isLogin]);
+  }, [isLogin, getWishListFun]); // Include getWishListFun in the dependency array
 
   return (
     <>

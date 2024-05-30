@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState, useContext, useCallback } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { UserToken } from "@/app/(Context)/UserToken";
@@ -19,14 +19,14 @@ export default function Cart() {
   const [data, setData] = useState(null);
   const router = useRouter();
 
-  // Display Cart Items
-  async function getCartFunc() {
+  // Memoized getCartFunc
+  const getCartFunc = useCallback(async () => {
     let res = await getCart();
     if (res?.data?.status === "success") {
       setData(res?.data);
       setNumOfCartItems(res?.data.numOfCartItems);
     }
-  }
+  }, [getCart, setNumOfCartItems]);
 
   // Remove Item from Cart
   async function deleteItemFunc(id) {
@@ -54,11 +54,11 @@ export default function Cart() {
   useEffect(() => {
     if (isLogin == null) return;
     getCartFunc();
-  }, [isLogin]);
+  }, [isLogin, getCartFunc]);
 
   if (numOfCartItems === 0) {
     return (
-      <div className="empty-cart my-4 d-flex flex-column align-items-center justify-content-center ">
+      <div className="empty-cart my-4 d-flex flex-column align-items-center justify-content-center">
         <h1 className="text-center fw-bold text-danger">Your Cart Is Empty!</h1>
         <Link href="/products">
           <button className="btn btn-danger fw-bold w-100">Go Fill It</button>
